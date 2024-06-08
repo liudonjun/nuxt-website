@@ -14,7 +14,7 @@
       </button>
     </div>
     <transition name="menu-slide">
-      <nav v-if="isOpen" class="md:hidden bg-gray-700">
+      <nav v-if="isOpen" class="md:hidden bg-gray-700 relative z-0">
         <NuxtLink to="/" class="block p-4 hover:bg-gray-600">首页</NuxtLink>
         <NuxtLink to="/about" class="block p-4 hover:bg-gray-600">关于</NuxtLink>
         <NuxtLink to="/contact" class="block p-4 hover:bg-gray-600">联系</NuxtLink>

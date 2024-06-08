@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main class="container mx-auto p-4">
+  <main class="container mx-auto p-4 relative z-1">
     <!-- Hero Section -->
     <section class="bg-gray-100 p-8 rounded-lg shadow-md text-center mb-8">
       <h1 class="text-3xl font-bold mb-4">欢迎访问我们的网站</h1>
