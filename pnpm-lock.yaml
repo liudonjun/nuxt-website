@@ -39,6 +39,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
+      vue-i18n:
+        specifier: ^9.13.1
+        version: 9.13.1(vue@3.4.27)
 
 packages:
 
