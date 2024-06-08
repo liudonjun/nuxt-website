@@ -5,7 +5,7 @@ import httpRequest from "~/util/request";
  * @description 
  * @return 
  */
-const getHello = (params: any) => {
+const getHello = (params?: any) => {
   return httpRequest.get('/hello', params);
 };
 

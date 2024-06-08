@@ -1,39 +1,25 @@
 <script setup lang="ts">
 import { getHello } from '@/service'
 import { useCounterStore } from '../store/index'
+import { useI18n } from 'vue-i18n';
 
-const title = ref({})
-
-const getConfig = async () => {
-  const { data: respone } = await getHello()
-  console.log('onMounted', respone);
-  title.value = respone.value
-}
-
-
+const res: any = await getHello()
 
 const store = useCounterStore()
 
 const count = computed(() => {
   return store.count
 })
-console.log('store', count);
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 
-console.log(t, locale);
-
-
-onMounted(async () => {
-  getConfig()
-})
 </script>
 
 <template>
   <main class="container mx-auto p-4 relative z-1">
     <!-- Hero Section -->
     <section class="bg-gray-100 p-8 rounded-lg shadow-md text-center mb-8">
-      <h1 class="text-3xl font-bold mb-4">{{ t('welcome') }} {{ title?.message }} {{ t('welcome') }}</h1>
+      <h1 class="text-3xl font-bold mb-4">{{ t('welcome') }} {{ res.message }} {{ count }}</h1>
       <p class="text-lg text-gray-700 mb-4">{{ t('heroDescription') }}</p>
       <button class="bg-blue-500 text-white px-4 py-2 rounded">{{ t('getStarted') }}</button>
     </section>

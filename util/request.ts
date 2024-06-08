@@ -1,4 +1,4 @@
-import { UseFetchOptions } from "nuxt/app";
+import type { UseFetchOptions } from "nuxt/app";
 
 type Methods = "GET" | "POST" | "DELETE" | "PUT";
 
@@ -33,7 +33,11 @@ class HttpRequest {
 
       useFetch(url, newOptions)
         .then((res) => {
-          resolve(res);
+          if (res.data.value) {
+            resolve(res.data.value);
+          } else {
+            reject(res.error.value || new Error("Unknown error"));
+          }
         })
         .catch((error) => {
           reject(error);
