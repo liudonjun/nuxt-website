@@ -4,11 +4,11 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@element-plus/nuxt', '@nuxtjs/i18n'],
   i18n: {
     locales: [
+      { code: 'cn', file: 'cn.json' },
       {
         code: 'en',
         file: 'en.json',
       },
-      { code: 'cn', file: 'cn.json' },
     ],
     defaultLocale: 'cn',
     lazy: true,

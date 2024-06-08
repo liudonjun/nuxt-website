@@ -64,7 +64,7 @@ const changeLocale = (event) => {
 
 .menu-slide-enter-to,
 .menu-slide-leave-from {
-  max-height: 10rem;
+  max-height: 14rem;
   /* 根据内容调整 */
 }
 </style>
