@@ -9,9 +9,10 @@ const route = useRoute()
 console.log(route.params.id)
 
 
-onMounted(async () => {
-  const { data, pending, error, refresh } = await useFetch('https://api.nuxt.com/modules/api/modules',)
+// onMounted(async () => {
+//   // const { data, pending, error, refresh } = await useFetch('https://api.nuxt.com/modules/api/modules',)
+//   const { data, pending, error, refresh } = await useFetch('https://service-berv0bu3-1257439196.sh.tencentapigw.com/release/hello',)
 
-  console.log('onMounted', data, pending, error, refresh);
-})
+//   console.log('onMounted', data, pending, error, refresh);
+// })
 </script>

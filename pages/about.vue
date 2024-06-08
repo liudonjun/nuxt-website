@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline bg-slate-600">
-      Hello world!
+  <div class="h-200">
+    <h1>
+      liudongjun@ldjun.cn
     </h1>
   </div>
 </template>

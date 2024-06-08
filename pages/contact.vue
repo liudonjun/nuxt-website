@@ -1,3 +1,3 @@
 <template>
-  <div>contact</div>
+  <div>liudongjun@ldjun.cn</div>
 </template>
