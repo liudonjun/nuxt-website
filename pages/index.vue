@@ -11,6 +11,15 @@ const count = computed(() => {
   return store.count
 })
 
+useSeoMeta({
+  title: 'nuxt',
+  ogTitle: 'The Nuxt Blog',
+  description: 'TThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt Blog',
+  ogDescription: 'The Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt BlogThe Nuxt Blog',
+  ogImage: 'https://example.com/image.png',
+  twitterCard: 'summary_large_image',
+})
+
 const { t } = useI18n()
 
 </script>
