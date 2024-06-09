@@ -1,7 +1,7 @@
 <template>
-  <div class="h-200">
+  <div class="z-10">
     <h1>
-      liudongjun@ldjun.cn
+      liudongjun@ldjun.cn about
     </h1>
   </div>
 </template>

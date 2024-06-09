@@ -1,0 +1,61 @@
+:root {
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052e16;
+
+  --color-gray-900: 18, 18, 18;
+  /* RGB values for dark mode background */
+  --color-gray-200: 238, 238, 238;
+  /* RGB values for dark mode foreground */
+  --color-black: 0, 0, 0;
+  --color-white: 255, 255, 255;
+
+  --ui-background-light: var(--color-white);
+  --ui-foreground-light: var(--color-black);
+
+  --ui-background-dark: var(--color-gray-900);
+  --ui-foreground-dark: var(--color-gray-200);
+}
+
+body {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: rgb(var(--ui-background) / var(--tw-bg-opacity));
+  color: rgb(var(--ui-foreground) / var(--tw-text-opacity));
+}
+
+a {
+  /* color: var(--color-green-300); */
+  /* color: var(--color-green-400); */
+  
+}
+
+a:hover {
+}
+
+button {
+  /* background-color: var(--color-green-500); */
+  color: var(--ui-foreground);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-green-400);
+}
+
+.header,
+.footer {
+  background-color: var(--ui-background);
+  color: var(--ui-foreground);
+}
