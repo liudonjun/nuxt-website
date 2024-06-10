@@ -1,5 +1,4 @@
 export default defineNuxtPlugin(() => {
-  console.log('11111111111111111111111');
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')

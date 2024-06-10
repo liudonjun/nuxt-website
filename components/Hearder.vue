@@ -1,6 +1,7 @@
 <template>
   <!-- fixed inset-x-0 top-0 -->
-  <header class="bg-white dark:bg-gray-800 z-10 text-black dark:text-white  border-b-2 border-slate-200 dark:border-gray-700">
+  <header
+    class="bg-white dark:bg-gray-800 text-black dark:text-white  border-b-2 border-slate-200 dark:border-gray-700">
     <div class="container mx-auto flex justify-between items-center p-4">
       <div class="flex items-center gap-2">
         <NuxtLink to="/" class="flex items-end gap-2">
@@ -53,12 +54,16 @@
         </button>
       </div>
     </div>
-    <transition name="menu-slide">
-      <nav v-if="isOpen" class="lg:hidden bg-gray-700">
-        <NuxtLink to="/" class="block p-4 hover:bg-gray-600">{{ t('home') }}</NuxtLink>
-        <NuxtLink to="/about" class="block p-4 hover:bg-gray-600">{{ t('about') }}</NuxtLink>
-        <NuxtLink to="/services" class="block p-4 hover:bg-gray-600">{{ t('services') }}</NuxtLink>
-        <NuxtLink to="/contact" class="block p-4 hover:bg-gray-600">{{ t('contact') }}</NuxtLink>
+    <transition name="menu-slide" >
+      <nav v-if="isOpen" class="lg:hidden dark:bg-gray-700 relative z-10">
+        <NuxtLink to="/" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('home') }}
+        </NuxtLink>
+        <NuxtLink to="/about" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('about')
+          }}</NuxtLink>
+        <NuxtLink to="/services" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
+          t('services') }}</NuxtLink>
+        <NuxtLink to="/contact" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
+          t('contact') }}</NuxtLink>
         <!-- <NuxtLink to="/services" class="block p-4 hover:bg-gray-600">{{ t('enterprise') }}</NuxtLink>
         <NuxtLink to="/services" class="block p-4 hover:bg-gray-600">{{ t('blog') }}</NuxtLink> -->
       </nav>

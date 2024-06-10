@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt'
   ],
   pwa: {
+    registerType: 'autoUpdate',
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
       runtimeCaching: [
@@ -95,6 +96,8 @@ export default defineNuxtConfig({
       background_color: '#ffffff',
       // display: 'standalone',
       display: 'browser',
+      scope: '/',
+      description: 'My Nuxt App',
       icons: [
         {
           src: '/icon.png',

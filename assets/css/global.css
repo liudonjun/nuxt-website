@@ -41,18 +41,17 @@ a {
 a:hover {
 }
 
-button {
-  /* background-color: var(--color-green-500); */
+/* button {
   color: var(--ui-foreground);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
-}
+} */
 
-button:hover {
+/* button:hover {
   background-color: var(--color-green-400);
-}
+} */
 
 .header,
 .footer {

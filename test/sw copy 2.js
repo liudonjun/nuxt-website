@@ -33,13 +33,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // console.log('event.request',event.request.url.include('offline'));
-  // TODO 离线页面start
-  // console.log('caches.match(OFFLINE_URL)',caches.match(OFFLINE_URL));
-  // if(caches.match(OFFLINE_URL)){
-  //   event.respondWith(caches.match(OFFLINE_URL))
-  // }
-  // 离线页面end
   console.log('[Service Worker] Fetching resource:', event.request.url);
   const requestURL = new URL(event.request.url);
 
@@ -47,9 +40,10 @@ self.addEventListener('fetch', (event) => {
   if (requestURL.pathname.endsWith('.css') || requestURL.pathname.endsWith('.vue')) {
     event.respondWith(
       fetch(event.request)
-        .catch(() => {
-          return caches.match(OFFLINE_URL)
-        })
+      // .catch(() => {
+      //   console.log(11111111111111111111111111111111111111111111);
+      //   return caches.match(OFFLINE_URL);
+      // })
     );
     return;
   }
