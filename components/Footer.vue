@@ -5,10 +5,11 @@
       <div>
         <h2 class="text-xl font-bold mb-4 text-gray-400">Nuxt</h2>
         <p class="text-gray-400">Vue Framework</p>
-        <select @change="changeLocale" class="bg-gray-400 text-gray-800 dark:bg-gray-400 border-none text-white outline-none mt-2">
+        <LanguageChange />
+        <!-- <select @change="changeLocale" class="bg-gray-400 text-gray-800 dark:bg-gray-400 border-none text-white outline-none mt-2">
           <option value="cn">中文</option>
           <option value="en">English</option>
-        </select>
+        </select> -->
       </div>
       <!-- Navigation Links -->
       <div>
