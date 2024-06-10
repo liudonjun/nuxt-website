@@ -16,23 +16,23 @@
         <h2 class="text-xl font-bold mb-4 text-gray-400">快速链接</h2>
         <ul class="space-y-2">
           <li>
-            <NuxtLink :to="localePath('/')" class="text-gray-400 hover:underline">首页</NuxtLink>
+            <NuxtLink :to="localePath('/')" class="text-gray-400 hover:underline">{{ t('home') }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/about')" class="text-gray-400 hover:underline">关于</NuxtLink>
+            <NuxtLink :to="localePath('/about')" class="text-gray-400 hover:underline">{{ t('about') }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/services')" class="text-gray-400 hover:underline">服务</NuxtLink>
+            <NuxtLink :to="localePath('/services')" class="text-gray-400 hover:underline">{{ t('services') }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/contact')" class="text-gray-400 hover:underline">联系</NuxtLink>
+            <NuxtLink :to="localePath('/contact')" class="text-gray-400 hover:underline">{{ t('contact') }}</NuxtLink>
           </li>
         </ul>
       </div>
       <!-- Contact and Social Links -->
       <div>
-        <h2 class="text-xl font-bold mb-4 text-gray-400">联系我们</h2>
-        <p class="text-gray-400 mb-2">邮箱：liudongjun@ldjun.cn</p>
+        <h2 class="text-xl font-bold mb-4 text-gray-400">{{ t('contactUs') }}</h2>
+        <p class="text-gray-400 mb-2">{{ t('email') }}：liudongjun@ldjun.cn</p>
         <!-- <p class="text-gray-400 mb-2">电话：+123 456 7890</p> -->
         <div class="flex space-x-4 mt-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
