@@ -29,10 +29,10 @@
         </NuxtLink>
       </div>
       <nav class="hidden lg:flex items-center gap-x-8">
-        <NuxtLink to="/" class="text-sm font-semibold hover:text-primary">{{ t('home') }}</NuxtLink>
-        <NuxtLink to="/about" class="text-sm font-semibold hover:text-primary">{{ t('about') }}</NuxtLink>
-        <NuxtLink to="/services" class="text-sm font-semibold hover:text-primary">{{ t('services') }}</NuxtLink>
-        <NuxtLink to="/contact" class="text-sm font-semibold hover:text-primary">{{ t('contact') }}</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="text-sm font-semibold hover:text-primary">{{ t('home') }}</NuxtLink>
+        <NuxtLink :to="localePath('/about')" class="text-sm font-semibold hover:text-primary">{{ t('about') }}</NuxtLink>
+        <NuxtLink :to="localePath('/services')" class="text-sm font-semibold hover:text-primary">{{ t('services') }}</NuxtLink>
+        <NuxtLink :to="localePath('/contact')" class="text-sm font-semibold hover:text-primary">{{ t('contact') }}</NuxtLink>
         <!-- <NuxtLink to="/services" class="text-sm font-semibold hover:text-primary">{{ t('enterprise') }}</NuxtLink>
         <NuxtLink to="/services" class="text-sm font-semibold text-primary">{{ t('blog') }}</NuxtLink> -->
       </nav>
@@ -54,16 +54,19 @@
         </button>
       </div>
     </div>
-    <transition name="menu-slide" >
+    <transition name="menu-slide">
       <nav v-if="isOpen" class="lg:hidden dark:bg-gray-700 relative z-10">
-        <NuxtLink to="/" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('home') }}
+        <NuxtLink :to="localePath('/')" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('home') }}
         </NuxtLink>
-        <NuxtLink to="/about" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('about')
+        <NuxtLink :to="localePath('/about')"
+          class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{ t('about')
           }}</NuxtLink>
-        <NuxtLink to="/services" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
-          t('services') }}</NuxtLink>
-        <NuxtLink to="/contact" class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
-          t('contact') }}</NuxtLink>
+        <NuxtLink :to="localePath('/services')"
+          class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
+            t('services') }}</NuxtLink>
+        <NuxtLink :to="localePath('/contact')"
+          class="block hover:underline hover:bg-slate-200 p-4 dark:hover:bg-gray-600">{{
+            t('contact') }}</NuxtLink>
         <!-- <NuxtLink to="/services" class="block p-4 hover:bg-gray-600">{{ t('enterprise') }}</NuxtLink>
         <NuxtLink to="/services" class="block p-4 hover:bg-gray-600">{{ t('blog') }}</NuxtLink> -->
       </nav>
@@ -80,6 +83,7 @@ const { t, locale } = useI18n();
 
 const colorMode = useColorMode()
 
+const localePath = useLocalePath();
 
 function toggleColorMode() {
   colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'

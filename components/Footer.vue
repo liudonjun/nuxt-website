@@ -16,16 +16,16 @@
         <h2 class="text-xl font-bold mb-4 text-gray-400">快速链接</h2>
         <ul class="space-y-2">
           <li>
-            <NuxtLink to="/" class="text-gray-400 hover:underline">首页</NuxtLink>
+            <NuxtLink :to="localePath('/')" class="text-gray-400 hover:underline">首页</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/about" class="text-gray-400 hover:underline">关于</NuxtLink>
+            <NuxtLink :to="localePath('/about')" class="text-gray-400 hover:underline">关于</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/services" class="text-gray-400 hover:underline">服务</NuxtLink>
+            <NuxtLink :to="localePath('/services')" class="text-gray-400 hover:underline">服务</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/contact" class="text-gray-400 hover:underline">联系</NuxtLink>
+            <NuxtLink :to="localePath('/contact')" class="text-gray-400 hover:underline">联系</NuxtLink>
           </li>
         </ul>
       </div>
@@ -92,6 +92,8 @@
 <script setup>
 
 const { t, locale } = useI18n();
+
+const localePath = useLocalePath();
 
 const changeLocale = (event) => {
   locale.value = event.target.value;
