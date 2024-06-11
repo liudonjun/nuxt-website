@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-website",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,13 +10,27 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.16.0",
     "@pinia/nuxt": "^0.5.1",
+    "@vite-pwa/nuxt": "^0.8.0",
     "nuxt": "^3.11.2",
+    "nuxtjs-naive-ui": "^1.0.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.9",
-    "element-plus": "^2.7.4"
+    "@nuxtjs/color-mode": "3.3.0",
+    "@nuxtjs/i18n": "^8.0.0",
+    "@unocss/nuxt": "0.55.3",
+    "@vueuse/nuxt": "10.4.1",
+    "autoprefixer": "^10.4.19",
+    "element-plus": "^2.7.4",
+    "postcss": "^8.4.38",
+    "sass": "1.66.1",
+    "sass-loader": "13.3.2",
+    "tailwindcss": "^3.4.4",
+    "typescript": "5.2.2",
+    "vue-i18n": "^9.13.1"
   }
 }

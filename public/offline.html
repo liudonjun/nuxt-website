@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7fafc;
+      color: #1a202c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .offline-container {
+      text-align: center;
+    }
+    .offline-container h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      color: #2d3748;
+    }
+    .offline-container p {
+      font-size: 1.2em;
+      color: #4a5568;
+    }
+    .refresh-button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background-color: #4a5568;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .refresh-button:hover {
+      background-color: #2d3748;
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <h1>您已脱机</h1>
+    <p>请检查您的互联网连接，然后重试。</p>
+    <button class="refresh-button" onclick="refreshPage()">刷新页面</button>
+  </div>
+
+  <script>
+    function refreshPage() {
+      window.location.reload();
+    }
+  </script>
+</body>
+</html>
